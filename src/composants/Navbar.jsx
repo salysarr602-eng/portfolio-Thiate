@@ -8,39 +8,41 @@ const Navbar = () => {
   const [ouvert, setOuvert] = useState(false)
 
   return (
-    <>
-      <nav className="nav">
-        <h1 className="logo">Thiate</h1>
+    <nav className="nav">
+      {/* GAUCHE */}
+      <h1 className="logo">Thiate</h1>
 
-        <div className="lol">
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/apropos">About</NavLink>
-          <NavLink to="/projets">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </div>
+      {/* MILIEU */}
+      <div className="lol">
+        <NavLink to="/"><p>Accueil</p></NavLink>
+        <NavLink to="/apropos"><p>About</p></NavLink>
+        <NavLink to="/projets"><p>Projects</p></NavLink>
+        <NavLink to="/contact"><p>Contact</p></NavLink>
+      </div>
 
-        <div className="menu">
-          <button className="login-btn" onClick={() => setOuvert(!ouvert)}>Login</button>
-          <IoMenu
-            onClick={() => setOpenMenu(!openMenu)}
-            className="hamburger"
-            size={30}
-          />
-        </div>
-      </nav>
+      {/* DROITE */}
+      <div className="menu">
+        <button className="login-btn" onClick={() => setOuvert(!ouvert)}>Login</button>
+        <IoMenu
+          onClick={() => setOpenMenu(!openMenu)}
+          className="hamburger"
+          size={30}
+        />
+      </div>
 
+      {/* VOLET MOBILE */}
       {openMenu && (
         <div className="mobile-menu">
-          <NavLink to="/" onClick={() => setOpenMenu(false)}>Accueil</NavLink>
-          <NavLink to="/apropos" onClick={() => setOpenMenu(false)}>About</NavLink>
-          <NavLink to="/projets" onClick={() => setOpenMenu(false)}>Projects</NavLink>
-          <NavLink to="/contact" onClick={() => setOpenMenu(false)}>Contact</NavLink>
+          <NavLink to="/" onClick={() => setOpenMenu(false)}><p>Accueil</p></NavLink>
+          <NavLink to="/apropos" onClick={() => setOpenMenu(false)}><p>About</p></NavLink>
+          <NavLink to="/projets" onClick={() => setOpenMenu(false)}><p>Projects</p></NavLink>
+          <NavLink to="/contact" onClick={() => setOpenMenu(false)}><p>Contact</p></NavLink>
           <button onClick={() => { setOuvert(true); setOpenMenu(false) }}>Login</button>
         </div>
       )}
 
       {ouvert && <Login onClose={() => setOuvert(false)} />}
-    </>
+    </nav>
   )
 }
 

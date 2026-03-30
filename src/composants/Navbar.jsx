@@ -9,10 +9,8 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      {/* GAUCHE */}
       <h1 className="logo">Thiate</h1>
 
-      {/* MILIEU */}
       <div className="lol">
         <NavLink to="/"><p>Accueil</p></NavLink>
         <NavLink to="/apropos"><p>About</p></NavLink>
@@ -20,7 +18,6 @@ const Navbar = () => {
         <NavLink to="/contact"><p>Contact</p></NavLink>
       </div>
 
-      {/* DROITE */}
       <div className="menu">
         <button className="login-btn" onClick={() => setOuvert(!ouvert)}>Login</button>
         <IoMenu
@@ -30,7 +27,6 @@ const Navbar = () => {
         />
       </div>
 
-      {/* VOLET MOBILE */}
       {openMenu && (
         <div className="mobile-menu">
           <NavLink to="/" onClick={() => setOpenMenu(false)}><p>Accueil</p></NavLink>

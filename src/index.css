@@ -197,33 +197,7 @@ footer {
    RESPONSIVE MOBILE (max 768px)
 ================================ */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-  .hero {
-    padding: 20px;
-    min-height: auto;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 30px;
-    gap: 20px;
-  }
-
-  .left h1 {
-    font-size: 30px;
-  }
-
-  .right {
-    display: flex;
-    justify-content: center;
-  }
-
-  .right img {
-    width: 200px;
-    height: 200px;
-  }
-}
+ 
 
   /* NAVBAR */
   nav {

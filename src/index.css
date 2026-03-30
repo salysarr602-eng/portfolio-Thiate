@@ -1,0 +1,328 @@
+/* NAVBAR */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+   margin: 0;
+  padding: 10px;
+  height: 10vh;
+  /*background-color: rgb(50, 165, 11);*/
+  background-color: #23375f;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #faf9f6; 
+}
+
+
+
+.logo {
+
+  color: rgb(245, 244, 243);
+}
+
+.lol  {
+  display: flex;
+  gap: 30px;
+  color: white;
+}
+
+
+
+
+
+/* FOND PRINCIPAL */
+.hero {
+  background-color: #3f3f72;
+  color: white;
+  min-height: 100vh;
+  padding: 30px 80px;
+  padding-left: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+
+/* SECTION PRINCIPALE */
+.hero-content {
+  display: flex;
+  justify-content: center; /* Modifié pour rapprocher texte et image */
+  align-items: center;
+  margin-top: 100px;
+  gap: 40px; /* Espace entre texte et image */
+}
+
+/* TEXTE GAUCHE */
+.left h1 {
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.left span {
+  color: #f8f8f7;
+}
+
+.left p {
+  margin-top: 20px;
+  color: #fdfcfc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* BOUTON */
+/*
+.btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+*/
+
+/* IMAGE (TA PHOTO) */
+.right img {
+  
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;        /* rend l’image ronde */
+  border: 6px solid #fffefc; /* bordure orange */
+  object-fit: cover;         /* évite que l’image soit déformée */
+}
+
+/* FOOTER */
+footer {
+  background-color:#1c1c44 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p{
+  color: white;
+}
+
+
+
+
+
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px;
+  background-color: #1d3247;
+  color: white;
+}
+
+/* TITRE */
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* CONTAINER IMAGE + CARDS */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+/* IMAGE */
+.left img {
+  width: 350px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* DROITE */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* CARDS */
+.card {
+  background-color: #283b61;
+  padding: 20px 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  color: #ffffff;
+}
+
+.card p {
+  color: #cfcfcf;
+  margin-top: 10px;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* NIVEAU */
+.card strong {
+  color: #fdfdfc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-left img {
+    width: 250px;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+.contact {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.projects {
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.project-card img {
+  width: 150px;
+}
+
+
+
+/* IMAGE HERO */
+.right img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 6px solid #fffefd;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* IMAGE A PROPOS */
+.left img {
+  width: 350px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .right img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .left img {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

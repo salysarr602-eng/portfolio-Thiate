@@ -1,6 +1,6 @@
 import saly from "../assets/img.jpg"
 
-function Hero() {
+function hero() {
   return (
     <div className="hero">
       <div className="hero-content">
@@ -15,7 +15,7 @@ function Hero() {
             mes compétences chaque jour.
           </p>
         </div>
-        <div className="right">
+                 <div className="right">
           <img src={saly} alt="Thiate" />
         </div>
       </div>
@@ -23,4 +23,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default hero;

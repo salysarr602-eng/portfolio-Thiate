@@ -1,25 +1,29 @@
 import React from 'react'
-import img3 from "../assets/img3.png"
-import img4 from "../assets/img4.png"
-import img5 from "../assets/img5.png"
+import { projets_bd } from '../data/Projet_bd'
+import { NavLink } from 'react-router-dom'
 
-function Projects() {
-  const projects = [
-    { image: img3, title: "Project 1" },
-    { image: img4, title: "Project 2" },
-    { image: img5, title: "Project 3" },
-  ]
-
+const Projects = () => {
   return (
-    <div className="projects">
-      <h2>Mes projets</h2>
-      <div className="projects-container">
-        {projects.map((proj, index) => (
-          <div className="project-card" key={index}>
-            <img src={proj.image} alt={proj.title} />
-            <p>{proj.title}</p>
-          </div>
-        ))}
+    <div className='projet'>
+      <h1>Mes projets</h1>
+      <div className="mes_projet">
+        {
+          projets_bd.map((projet) => (
+            <NavLink to={`/projet/${projet.id}`} key={projet.id} className="un_projet">
+              <img src={projet.image} alt={projet.nom} />
+              <div className="box_projet">
+                <p>{projet.nom}</p>
+                <div className="technos">
+                  {
+                    projet.techno.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))
+                  }
+                </div>
+              </div>
+            </NavLink>
+          ))
+        }
       </div>
     </div>
   )

@@ -263,3 +263,60 @@ footer {
     align-items: center;
   }
 }
+
+/* HAMBURGER - caché sur desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MENU MOBILE */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #23375f;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-menu button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    /* Cache les liens desktop */
+    .lol {
+        display: none;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    /* Affiche le hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Affiche le menu mobile */
+    .mobile-menu {
+        display: flex;
+    }
+}

@@ -1,21 +1,19 @@
 import saly from "../assets/img.jpg"
 
-function hero() {
+function Hero() {
   return (
     <div className="hero">
-      <div className="hero-content">
-        <div className="left">
-          <h1>
-            Bonjour,<br />
-            je suis <span>Saly Tening Sarr</span>
-          </h1>
+      <div className="box_hero">
+        <div className="hero_gauche">
+          <h1>Bonjour,</h1>
+          <h2>je suis Saly Tening Sarr</h2>
           <p>
             Je suis développeuse fullstack, passionnée par l'informatique
             et les nouvelles technologies. J'aime apprendre et développer
             mes compétences chaque jour.
           </p>
         </div>
-                 <div className="right">
+        <div className="hero_droite">
           <img src={saly} alt="Thiate" />
         </div>
       </div>
@@ -23,4 +21,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;
